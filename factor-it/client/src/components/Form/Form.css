@@ -1,0 +1,37 @@
+.form-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    max-width: 5rem;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1060px) {
+    .form-control {
+        padding-right: 0;
+    }
+}
+
+.square-input {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.375rem 0.375rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 0;
+}
+
+.rotateable {
+    transform: rotate(-45deg);
+}
+
+label {
+    font-family: 'Coming Soon', cursive;
+    color: #2A4756;
+}

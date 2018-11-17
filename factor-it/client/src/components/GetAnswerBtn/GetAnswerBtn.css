@@ -1,0 +1,32 @@
+h1, h2, h4, h5, input {
+    font-family: 'Coming Soon', cursive;
+    color: #2A4756
+}
+
+.navbar-brand, h3, p, .btn, label, li {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.navbar {
+    background: linear-gradient(45deg, #2f505a, #068587);
+    box-shadow: 1px 1px 5px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1060px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.get-ans-btn {
+    background: linear-gradient(rgb(245, 193, 96), rgb(219, 149, 18));
+    border: none;
+}
+
+.get-ans-btn:hover {
+    background-color: rgb(247, 199, 110);
+    border-color: rgb(247, 199, 110);
+}

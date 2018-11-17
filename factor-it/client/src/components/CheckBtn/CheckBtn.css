@@ -1,0 +1,18 @@
+.check-btn {
+    background-color: #068587;
+    background: linear-gradient(#068587, #034d4e);
+    border: none;
+}
+.check-btn:hover {
+    background-color: #32adaf;
+}
+.close-span{
+    color: #068587;
+    cursor: pointer;
+}
+.align-right{
+    text-align: right;
+}
+.popover{
+    font-family: 'Muli', sans-serif;
+}
