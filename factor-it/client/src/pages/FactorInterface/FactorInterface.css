@@ -1,0 +1,9 @@
+.yellow{
+    color: rgb(247, 199, 110);
+}
+
+@media only screen and (max-width: 991px) {
+    .body-row{
+        padding-top: 4rem;
+    }
+}

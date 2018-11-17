@@ -1,0 +1,85 @@
+.diamond {
+    padding-left: 15%;
+    transform: rotate(45deg);
+}
+@media only screen and (min-width: 2000px) {
+    .diamond {
+        padding-left: 20%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .diamond {
+        padding-top: 10%;
+        padding-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 572px) {
+    .diamond {
+        padding-top: 20%;
+        padding-left: 20%;
+    }
+}
+
+.box {
+    padding-top: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+.box-quad {
+    background-color: #F2B134;
+    border-top-left-radius: 15px;
+}
+
+.box-ac {
+    background-color: #2A4756;
+    border-top-left-radius: 15px;
+}
+
+.box-bottom {
+    background: #068587;
+    border-bottom-right-radius: 15px;
+}
+
+.box-linear {
+    background-color: #4FB99F;
+}
+
+.box-linear-top {
+    border-top-right-radius: 15px;
+}
+
+.box-linear-bottom {
+    border-bottom-left-radius: 15px;
+}
+
+.box-constant {
+    background-color: #ED7666;
+    border-bottom-right-radius: 15px;
+}
+
+.ACol, .BCol, .CCol, .text-align-center {
+    text-align: center;
+}
+
+.step4 {
+    margin-top: 4rem;
+}
+
+.text-align-content {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
+}
+
+.col-6 {
+    background-color: #B5E5D8;
+}
+.boxCol {
+    margin-bottom: 2rem;
+}
+.lin-term-col{
+    padding-left: 0;
+}
