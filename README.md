@@ -7,7 +7,7 @@
 
 ## Instructions
 
-### For all problems:
+### For each step:
 
 #### Inputs
 Each step has inputs for the user to provide their answers. Once the user has either provided the correct responses or has requested the answer, the inputs cannot be further updated. 
