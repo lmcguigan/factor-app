@@ -1,5 +1,5 @@
 # factor.it
-factor.it is a web application that allows students to practice factoring quadratic trinomials with the "x-box" method. The process of factoring is broken into seven discrete steps. 
+**factor.it** is a web application that allows students to practice factoring quadratic trinomials with the "x-box" method. The process of factoring is broken into seven discrete steps. 
 
 ## Logging In
 - Users must first create an account to use the application. Accounts allow for tracking user data, such as the problems that they have solved completely and those that remain to be solved, as well as their accumulated points.
@@ -10,29 +10,30 @@ factor.it is a web application that allows students to practice factoring quadra
 ### For all problems:
 
 #### Inputs
-- Each step has inputs for the user to provide their answers. Once the user has either provided the correct responses or has requested the answer, the inputs cannot be further updated. 
+Each step has inputs for the user to provide their answers. Once the user has either provided the correct responses or has requested the answer, the inputs cannot be further updated. 
 
 #### Buttons
-- Each task is labeled with a circle bearing the step number. Underneath these labels are a series of buttons:
-- **Instructions** On click, this button will display the instructions for this step in a Popover. 
+Each task is labeled with a circle bearing the step number. Underneath these labels are a series of buttons:
+- **Instructions** — On click, this button will display the instructions for this step in a Popover. 
 ![Instructions](./readmeImages/instructions.png?raw=true "Instructions Button")
-- **Check** On click, this button will check what the user has entered into each of the inputs for that specific task, and provide feedback about whether the responses are correct in a Popover.
+- **Check** — On click, this button will check what the user has entered into each of the inputs for that specific task, and provide feedback about whether the responses are correct in a Popover.
 ![Check](./readmeImages/checkfeedback.png?raw=true "Check Button")
-- **Get Answer** On click, this button will retreive the correct response for the task, and then close this task from further responses. 
+- **Get Answer** — On click, this button will retreive the correct response for the task, and then close this task from further responses. 
 
 #### Moving on from a step
-- There are two ways to move on from a step:
-    1. Provide the correct responses and click the **Check** button to validate the responses.
-    2. Click the **Get Answer** button, which shows the correct response and automatically proceeds to the next step.
-- After the user has moved on from a step, the **Check** and **Get Answer** buttons are no longer visible. 
+There are two ways to move on from a step:
+1. Provide the correct responses and click the **Check** button to validate the responses.
+2. Click the **Get Answer** button, which shows the correct response and automatically proceeds to the next step.
+
+After the user has moved on from a step, the **Check** and **Get Answer** buttons are no longer visible. 
 
 #### Moving on from a Problem
-- There are two ways to move on from a problem:
-    1. Proceed through the steps until Step 7, enter the correct answer, and click the Next Problem button in the modal.
-    2. Click the yellow Next Problem button in the navigation bar. 
+There are two ways to move on from a problem:
+1. Proceed through the steps until Step 7, enter the correct answer, and click the Next Problem button in the modal.
+2. Click the yellow Next Problem button in the navigation bar. 
 
 #### Points
-- Users earn points for each task that they complete. The user's cumulative points are stored in the Mongo database and displayed in the navigation bar, along with the points accumulated in that round.
+Users earn points for each task that they complete. The user's cumulative points are stored in the Mongo database and displayed in the navigation bar, along with the points accumulated in that round.
 
 ### Step-by-Step Guide
 
