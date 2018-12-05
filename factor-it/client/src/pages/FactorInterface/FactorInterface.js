@@ -160,10 +160,12 @@ class FactorInterface extends Component {
             modalNextButton: false
         });
     }
+    printState = () => {
+        console.log(this.state);
+    }
     closeModal() {
         this.setState({ modalShow: false })
     }
-
     closeModalStep7 = () => {
         this.closeModal();
         this.getNextProblem(this.state.userPointsThisRound);
@@ -915,7 +917,7 @@ class FactorInterface extends Component {
     render() {
         return (
             <Container fluid>
-                <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
+                <nav className="navbar fixed-top navbar-expand-lg navbar-dark" onClick={() =>this.printState()}>
                     <div className="navbar-header">
                         <h1><a className="navbar-brand" href="/">factor.it</a></h1>
                     </div>
@@ -1223,7 +1225,7 @@ class FactorInterface extends Component {
                     ) : (
                             <Col size="12 lg-6">
                                 <Row clName="height18">
-                                    <Col size="12 sm-6" clName = "boxCol">
+                                    <Col size="12 sm-6" clName="boxCol">
                                         <Row>
                                             <div className="box"></div>
                                             {this.state.step < 6 ? (

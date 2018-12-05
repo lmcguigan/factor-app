@@ -15,7 +15,7 @@ router.post("/register", function (req, res) {
             if (err) {
                 return res.json(err);
             }
-            for(let i = 0; i < problems.length; i++){
+            for (let i = 0; i < problems.length; i++) {
                 let newProblem = {
                     A: problems[i].A,
                     B: problems[i].B,
@@ -24,8 +24,8 @@ router.post("/register", function (req, res) {
                     binomialFactors: problems[i].binomialFactors,
                     solved: false,
                 }
-                db.UserProblem.create(newProblem).then(function(userP){
-                    db.User.findOneAndUpdate({_id:thisUserId}, { $push: { problems: userP} }, { new: true }).then(function(finished){
+                db.UserProblem.create(newProblem).then(function (userP) {
+                    db.User.findOneAndUpdate({ _id: thisUserId }, { $push: { problems: userP } }, { new: true }).then(function (finished) {
                         console.log("Updated!", finished)
                     })
                 })
@@ -37,16 +37,21 @@ router.post("/register", function (req, res) {
 
 router.post("/login", function (req, res) {
     db.User.findOne({ username: req.body.username }, function (error, response) {
-        console.log(response);
         if (error) {
+            console.log(error)
             return res.json(error)
         }
-        response.comparePassword(req.body.password, function (error, user) {
-            if (error) {
-                return res.json(error)
-            }
-            res.json({ user: user, response: response });
-        });
+        if (response === null) {
+            return res.json({message: "Sorry, your username is not valid. Please register to use the app."})
+        }
+        else {
+            response.comparePassword(req.body.password, function (error, user) {
+                if (error) {
+                    return res.json(error)
+                }
+                res.json({ user: user, response: response });
+            });
+        }
     })
 })
 

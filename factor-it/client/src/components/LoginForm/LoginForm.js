@@ -27,27 +27,32 @@ class LoginForm extends Component {
         console.log(this.state);
         API.login(this.state).then((response) => {
             console.log(response);
-            console.log(response.data.response._id)
-            //if true, and password matches
-            //otherwise alert them that password doesn't match
-            let passwordCorrect = response.data.user;
-            console.log(passwordCorrect);
-            if (passwordCorrect === true) {
-                return window.location.assign("/factor/" + response.data.response._id)
+            if (response.data.message === "Sorry, your username is not valid. Please register to use the app.") {
+                this.setState({ errorMessage: response.data.message, messageShow: true })
             }
             else {
-                this.setState({ errorMessage: "Either your username or password are incorrect.", messageShow: true })
+                console.log(response.data.response._id)
+                //if true, and password matches
+                //otherwise alert them that password doesn't match
+                let passwordCorrect = response.data.user;
+                console.log(passwordCorrect);
+                if (passwordCorrect === true) {
+                    return window.location.assign("/factor/" + response.data.response._id)
+                }
+                else {
+                    this.setState({ errorMessage: "Either your username or password are incorrect.", messageShow: true })
+                }
             }
         })
     }
 
     handleRegister = (event) => {
         event.preventDefault();
-        API.register(this.state).then((response) =>{
+        API.register(this.state).then((response) => {
             console.log(response);
             console.log(response.data.code)
             let validRegistration = true;
-            if (response.data.code === 11000){
+            if (response.data.code === 11000) {
                 validRegistration = false;
             }
             if (validRegistration === true) {
@@ -63,10 +68,10 @@ class LoginForm extends Component {
         return (
             <form id="loginform" className="login-form">
                 {this.state.messageShow === true ? (
-                    <p className = "error-message">{this.state.errorMessage}</p>
-                ):(
-                    <div></div>
-                )}
+                    <p className="error-message">{this.state.errorMessage}</p>
+                ) : (
+                        <div></div>
+                    )}
                 <div className="row">
                     <div className="col-12">
                         <input className="login-input" name="username" type="text" placeholder="Username" onChange={this.captureInput} ></input>
