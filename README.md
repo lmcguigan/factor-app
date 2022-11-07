@@ -80,6 +80,3 @@ Users earn points for each task that they complete. The user's cumulative points
 
 ### Inspiration
 I was inspired to create this application upon a reflection on my experiences as a Algebra II teacher while serving as a Teach for America Corps Member in the Greater New Orleans Region. I was introduced to the "x-box" method of factoring through my TFA Planning Group and was overjoyed to learn of a method that effectively utilized visual organizing tools and provided a failsafe process beyond the "guess and check" strategy that I had learned as a student. I elaborated upon this process to augment the iconography with colors and shapes in my instructional PowerPoints. While this method had great success, its series of sequential steps meant that it created a hindrance for students who got stuck on any one of them, and the regimented process could also preclude a deeper conceptual understanding of the purpose of the diamond (to break the linear term into two) and the box (to extract common factors of the terms and produce two linear binomial factors). Tasked with devising an idea for a full-stack web application to serve as a final project for my Full-Stack Web Development program at the Southern Methodist University Coding Bootcamp. 
-
-### Links
-- [Live application](https://aqueous-ocean-61869.herokuapp.com/)
